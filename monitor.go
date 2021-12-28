@@ -15,7 +15,8 @@ import (
 
 // Get Information from file and return the result
 func read_file() []byte {
-	content, err := ioutil.ReadFile("/proc/net/snmp")
+	// "/proc/net/snmp" is the file that contains the information
+	content, err := ioutil.ReadFile("/home/snmp")
 	if err != nil {
 		log.Fatal(err)
 	}
